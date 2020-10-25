@@ -99,6 +99,7 @@ services:
     image: ambientum/php:7.2
     container_name: accordous-novo-queue
     command: php artisan queue:listen
+    restart: on-failure
     volumes:
       - ./apiato/:/var/www/app
     environment:
