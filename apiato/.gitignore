@@ -1,0 +1,9 @@
+/node_modules
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+/laradock*/
+_ide_helper*.php
+.phpstorm.meta.php
+/.vagrant
+/.idea

@@ -1,0 +1,127 @@
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+/*Data for the table `estado` */
+
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (3,27,'Alagoas','AL','2020-07-25 18:26:43','2020-07-25 18:26:43',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (4,13,'Amazonas','AM','2020-07-25 18:26:51','2020-07-25 18:26:51',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (5,16,'Amapá','AP','2020-07-25 18:27:00','2020-07-25 18:27:00',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (6,29,'Bahia','BA','2020-07-25 18:27:18','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (7,23,'Ceará','CE','2020-07-25 18:27:25','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (8,53,'Distrito Federal','DF','2020-07-25 18:32:51','2020-10-18 12:14:46',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (9,32,'Espírito Santo','ES','2020-07-25 18:33:12','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (10,52,'Goiás','GO','2020-07-25 18:33:20','2020-10-18 12:14:46',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (11,21,'Maranhão','MA','2020-07-25 18:33:49','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (12,31,'Minas Gerais','MG','2020-07-25 18:34:01','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (13,50,'Mato Grosso do Sul','MS','2020-07-25 18:34:08','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (14,51,'Mato Grosso','MT','2020-07-25 18:34:15','2020-10-18 12:14:46',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (15,15,'Pará','PA','2020-07-25 18:34:22','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (16,25,'Paraíba','PB','2020-07-25 18:34:29','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (17,26,'Pernambuco','PE','2020-07-25 18:34:36','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (18,22,'Piauí','PI','2020-07-25 18:34:44','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (19,41,'Paraná','PR','2020-07-25 18:34:51','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (20,33,'Rio de Janeiro','RJ','2020-07-25 18:34:59','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (21,24,'Rio Grande do Norte','RN','2020-07-25 18:35:06','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (22,14,'Roraima','RR','2020-07-25 18:35:14','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (23,11,'Rondônia','RO','2020-07-25 18:35:23','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (24,43,'Rio Grande do Sul','RS','2020-07-25 18:35:31','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (25,42,'Santa Catarina','SC','2020-07-25 18:35:41','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (26,28,'Sergipe','SE','2020-07-25 18:35:48','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (27,35,'São Paulo','SP','2020-07-25 18:35:56','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (28,17,'Tocantins','TO','2020-07-25 18:36:03','2020-10-18 12:14:45',NULL);
+insert  into `estado`(`id`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (32,12,'Acre','AC','2020-10-18 12:14:45','2020-10-18 12:14:45',NULL);
+
+/*Data for the table `estado_ativo` */
+
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (3,3,27,'Alagoas','AL','2020-07-25 18:26:43',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (4,4,13,'Amazonas','AM','2020-07-25 18:26:51',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (5,5,16,'Amapá','AP','2020-07-25 18:27:00',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (33,23,11,'Rondônia','RO','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (34,32,12,'Acre','AC','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (35,22,14,'Roraima','RR','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (36,15,15,'Pará','PA','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (37,28,17,'Tocantins','TO','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (38,11,21,'Maranhão','MA','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (39,18,22,'Piauí','PI','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (40,7,23,'Ceará','CE','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (41,21,24,'Rio Grande do Norte','RN','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (42,16,25,'Paraíba','PB','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (43,17,26,'Pernambuco','PE','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (44,26,28,'Sergipe','SE','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (45,6,29,'Bahia','BA','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (46,12,31,'Minas Gerais','MG','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (47,9,32,'Espírito Santo','ES','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (48,20,33,'Rio de Janeiro','RJ','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (49,27,35,'São Paulo','SP','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (50,19,41,'Paraná','PR','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (51,25,42,'Santa Catarina','SC','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (52,24,43,'Rio Grande do Sul','RS','2020-10-18 12:14:45',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (53,13,50,'Mato Grosso do Sul','MS','2020-10-18 12:14:46',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (54,14,51,'Mato Grosso','MT','2020-10-18 12:14:46',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (55,10,52,'Goiás','GO','2020-10-18 12:14:46',NULL);
+insert  into `estado_ativo`(`id`,`id_estado`,`id_ibge`,`nome`,`sigla`,`dt_criacao`,`dt_remocao`) values (56,8,53,'Distrito Federal','DF','2020-10-18 12:14:46',NULL);
+
+/*Data for the table `funcionalidade` */
+
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102110,NULL,4,'Sistema',NULL,'fa fa-cubes','2020-07-25 13:51:41','2020-07-25 14:20:51',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102111,102110,2,'Segurança',NULL,'fa fa-user-shield','2020-07-25 13:51:58','2020-07-25 13:51:58',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102112,102111,1,'Perfil','/seguranca/perfil','fa fa-id-card','2020-07-25 13:52:15','2020-07-25 13:52:22',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102113,102111,2,'Usuário','/seguranca/usuario','fa fa-users','2020-07-25 14:21:44','2020-07-25 14:21:50',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102114,102111,3,'Funcionalidade','/seguranca/funcionalidade','fa fa-tv','2020-07-25 14:22:02','2020-08-08 21:12:23',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102116,102110,1,'Cadastro',NULL,'fa fa-newspaper','2020-07-25 14:43:38','2020-10-16 07:27:36',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102117,102116,1,'Estado','/cadastro/estado','fa fa-map-marked-alt','2020-07-25 14:45:04','2020-07-25 14:45:04',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102121,102116,3,'Imóvel','/cadastro/imovel','fa fa-home','2020-10-16 07:23:59','2020-10-16 07:23:59',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102122,102116,2,'Cidade','/cadastro/cidade','fa fa-city','2020-10-20 22:44:38','2020-10-20 22:45:09',NULL);
+insert  into `funcionalidade`(`id`,`id_parente`,`ordem`,`nome`,`url`,`icone`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (102123,102116,4,'Contrato','/cadastro/contrato','fa fa-file-contract','2020-10-21 00:26:23','2020-10-22 13:40:49',NULL);
+
+/*Data for the table `migrations` */
+
+insert  into `migrations`(`id`,`migration`,`batch`) values (26,'2000_01_01_000001_create_users_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (27,'2000_01_01_000002_create_password_resets_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (28,'2016_06_01_000001_create_oauth_auth_codes_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (29,'2016_06_01_000002_create_oauth_access_tokens_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (30,'2016_06_01_000003_create_oauth_refresh_tokens_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (31,'2016_06_01_000004_create_oauth_clients_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (32,'2016_06_01_000005_create_oauth_personal_access_clients_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (33,'2016_12_29_201047_create_permission_tables',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (34,'2016_20_09_030201_create_settings_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (35,'2017_03_28_203558_create_jobs_table',1);
+insert  into `migrations`(`id`,`migration`,`batch`) values (36,'2017_03_28_203559_create_failed_jobs_table',2);
+insert  into `migrations`(`id`,`migration`,`batch`) values (37,'2017_09_12_174826_create_notifications_table',2);
+insert  into `migrations`(`id`,`migration`,`batch`) values (38,'2017_10_27_091547_add_level_column_to_roles_table',2);
+insert  into `migrations`(`id`,`migration`,`batch`) values (39,'2020_09_19_185623_initial_db_tables',3);
+
+/*Data for the table `perfil` */
+
+insert  into `perfil`(`id`,`nome`,`historico_alteracao`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (10519,'masteruser',1,'2020-07-13 08:29:16','2020-10-20 22:49:39',NULL);
+
+/*Data for the table `perfil_funcionalidade` */
+
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024448,10519,102110,NULL,4,1,'2020-07-25 13:51:41','2020-07-25 13:51:41',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024450,10519,102111,1024448,2,1,'2020-07-25 13:51:58','2020-07-25 13:51:58',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024452,10519,102112,1024450,1,1,'2020-07-25 13:52:16','2020-07-25 13:52:16',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024454,10519,102113,1024450,2,1,'2020-07-25 14:21:44','2020-07-25 14:41:59',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024456,10519,102114,1024450,3,1,'2020-07-25 14:22:02','2020-10-16 07:28:00',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024460,10519,102116,1024448,1,1,'2020-07-25 14:43:38','2020-07-25 14:43:38',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1024462,10519,102117,1024460,1,1,'2020-07-25 14:45:04','2020-07-25 14:45:04',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1025511,10519,102120,NULL,3,1,'2020-08-02 21:10:05','2020-08-02 21:10:05',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1025517,10519,102121,1025511,4,0,'2020-08-02 21:10:31','2020-10-16 07:24:38',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1025523,10519,102122,1025517,1,1,'2020-08-02 21:13:24','2020-08-02 21:13:24',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1028224,10519,102121,1024460,5,1,'2020-10-16 07:23:59','2020-10-20 22:50:32',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1028226,10519,102122,1024460,2,1,'2020-10-20 22:44:38','2020-10-20 22:44:38',NULL);
+insert  into `perfil_funcionalidade`(`id`,`id_perfil`,`id_funcionalidade`,`id_parente`,`ordem`,`ativo`,`dt_criacao`,`dt_alteracao`,`dt_remocao`) values (1028228,10519,102123,1024460,6,1,'2020-10-21 00:26:23','2020-10-21 00:26:23',NULL);
+
+/*Data for the table `usuario` */
+
+insert  into `usuario`(`id`,`id_perfil`,`usuario`,`senha`,`dt_criacao`,`dt_alteracao`,`dt_acesso`,`dt_remocao`) values (8,10519,'admin','Hx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQBqtG9UMQfZoyh3m/Ainfo/','2020-06-20 08:58:25','2020-10-22 11:07:22','2020-10-22 11:07:22',NULL);
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

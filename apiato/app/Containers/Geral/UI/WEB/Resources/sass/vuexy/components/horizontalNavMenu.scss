@@ -1,0 +1,28 @@
+@import "@sass/vuexy/_variables.scss";
+
+.menu-item {
+	.nav-link {
+		color: inherit;
+	}
+
+	.disabled-item {
+		span {
+			color: #888787;
+		}
+	}
+}
+
+.h-nav-menu-dd {
+	background-color: $white;
+	// border: 1px solid transparent;
+}
+
+/* DARK THEME */
+
+.theme-dark {
+	.h-nav-menu-dd {
+		background-color: $theme-light-dark-bg;
+		// border-color: $theme-dark-border-color;
+		box-shadow: 0px 0px 30px #0f163a !important;
+	}
+}

@@ -1,0 +1,59 @@
+.theme-dark-text-primary {
+  color: rgba(var(--theme-dark-text-color), 1) !important;
+}
+
+#content-area {
+	position: relative;
+}
+
+#content-area footer.the-footer {
+	min-height: 49px;
+}
+
+.con-vs-loading .title-loading {
+	color: #ffffff;
+	margin-top: 30%;
+}
+
+.vs-con-loading__container {
+	overflow: initial;
+}
+
+.vs-con-loading__container .con-vs-loading {
+	justify-content: start;
+	top: 0px;
+	left: 0px;
+	transform: none;
+}
+
+.vs-notifications {
+	max-width: initial !important;
+}
+
+input.input-switch.vs-switch--input[type="checkbox"]:disabled,
+input.vs-checkbox--input[type="checkbox"]:disabled {
+	opacity: 0;
+}
+
+input:disabled {
+	background-color: #f8f8f8;
+	opacity: 0.5;
+}
+
+.v-select.vs--disabled {
+	background-color: #f8f8f8;
+	opacity: 0.5;
+	pointer-events: none;
+}
+.v-select input.vs__search::-webkit-input-placeholder,
+.v-select input.vs__search::-moz-placeholder,
+.v-select input.vs__search:-ms-input-placeholder,
+.v-select input.vs__search:-moz-placeholder,
+.v-select input.vs__search::placeholder,
+.v-select input.vs__search::-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.4);
+}
+
+.the-navbar__user-meta .con-img .con-vs-avatar {
+	margin: 0px;
+}

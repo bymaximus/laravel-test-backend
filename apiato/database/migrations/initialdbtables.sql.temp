@@ -1,0 +1,402 @@
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+/*Table structure for table `audits` */
+
+CREATE TABLE IF NOT EXISTS `audits` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_type` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_id` bigint(20) unsigned DEFAULT NULL,
+  `event` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `auditable_type` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `auditable_id` bigint(20) unsigned NOT NULL,
+  `old_values` text COLLATE utf8_unicode_ci,
+  `new_values` text COLLATE utf8_unicode_ci,
+  `url` text COLLATE utf8_unicode_ci,
+  `ip_address` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `user_agent` varchar(1023) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `tags` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `audits_auditable_type_auditable_id_index` (`auditable_type`,`auditable_id`),
+  KEY `audits_user_id_user_type_index` (`user_id`,`user_type`)
+) ENGINE=InnoDB AUTO_INCREMENT=100 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `cidade` */
+
+CREATE TABLE IF NOT EXISTS `cidade` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_estado` bigint(20) NOT NULL,
+  `id_ibge` bigint(20) DEFAULT NULL,
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5576 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `cidade_ativo` */
+
+CREATE TABLE IF NOT EXISTS `cidade_ativo` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_cidade` bigint(20) NOT NULL,
+  `id_estado` bigint(20) NOT NULL,
+  `id_ibge` bigint(20) DEFAULT NULL,
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5578 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `contrato` */
+
+CREATE TABLE IF NOT EXISTS `contrato` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_imovel` bigint(20) unsigned NOT NULL,
+  `tipo_pessoa` int(1) unsigned NOT NULL DEFAULT '1',
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `documento` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+/*Table structure for table `estado` */
+
+CREATE TABLE IF NOT EXISTS `estado` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_ibge` bigint(20) DEFAULT NULL,
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `sigla` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `estado_ativo` */
+
+CREATE TABLE IF NOT EXISTS `estado_ativo` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_estado` bigint(20) NOT NULL,
+  `id_ibge` bigint(20) DEFAULT NULL,
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `sigla` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `failed_jobs` */
+
+CREATE TABLE IF NOT EXISTS `failed_jobs` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `connection` text COLLATE utf8_unicode_ci NOT NULL,
+  `queue` text COLLATE utf8_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `exception` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `funcionalidade` */
+
+CREATE TABLE IF NOT EXISTS `funcionalidade` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_parente` bigint(20) DEFAULT NULL,
+  `ordem` int(11) unsigned NOT NULL DEFAULT '0',
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `url` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `icone` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `parente` (`id_parente`)
+) ENGINE=InnoDB AUTO_INCREMENT=102124 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+/*Table structure for table `imovel` */
+
+CREATE TABLE IF NOT EXISTS `imovel` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_estado_ativo` bigint(20) unsigned NOT NULL,
+  `id_cidade_ativo` bigint(20) NOT NULL,
+  `email` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `bairro` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `rua` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `numero` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `complemento` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+
+/*Table structure for table `jobs` */
+
+CREATE TABLE IF NOT EXISTS `jobs` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `queue` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `payload` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `attempts` tinyint(3) unsigned NOT NULL,
+  `reserved_at` int(10) unsigned DEFAULT NULL,
+  `available_at` int(10) unsigned NOT NULL,
+  `created_at` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `jobs_queue_reserved_at_index` (`queue`,`reserved_at`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `migrations` */
+
+CREATE TABLE IF NOT EXISTS `migrations` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `migration` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `model_has_permissions` */
+
+CREATE TABLE IF NOT EXISTS `model_has_permissions` (
+  `permission_id` int(10) unsigned NOT NULL,
+  `model_type` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `model_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`model_type`,`model_id`,`permission_id`),
+  KEY `model_has_permissions_model_type_model_id_index` (`model_type`,`model_id`),
+  KEY `model_has_permissions_permission_id_foreign` (`permission_id`),
+  CONSTRAINT `model_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `model_has_roles` */
+
+CREATE TABLE IF NOT EXISTS `model_has_roles` (
+  `role_id` int(10) unsigned NOT NULL,
+  `model_type` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `model_id` bigint(20) unsigned NOT NULL,
+  PRIMARY KEY (`model_id`,`role_id`,`model_type`),
+  KEY `model_has_roles_model_type_model_id_index` (`model_type`,`model_id`),
+  KEY `model_has_roles_role_id_foreign` (`role_id`),
+  CONSTRAINT `model_has_roles_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `notifications` */
+
+CREATE TABLE IF NOT EXISTS `notifications` (
+  `id` char(36) COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `notifiable_type` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `notifiable_id` bigint(20) unsigned NOT NULL,
+  `data` text COLLATE utf8_unicode_ci NOT NULL,
+  `read_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `notifications_notifiable_type_notifiable_id_index` (`notifiable_type`,`notifiable_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `oauth_access_tokens` */
+
+CREATE TABLE IF NOT EXISTS `oauth_access_tokens` (
+  `id` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` bigint(20) DEFAULT NULL,
+  `client_id` int(10) unsigned NOT NULL,
+  `name` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `scopes` text COLLATE utf8_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_access_tokens_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `oauth_auth_codes` */
+
+CREATE TABLE IF NOT EXISTS `oauth_auth_codes` (
+  `id` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `user_id` bigint(20) NOT NULL,
+  `client_id` int(10) unsigned NOT NULL,
+  `scopes` text COLLATE utf8_unicode_ci,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `oauth_clients` */
+
+CREATE TABLE IF NOT EXISTS `oauth_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) DEFAULT NULL,
+  `name` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `secret` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `redirect` text COLLATE utf8_unicode_ci NOT NULL,
+  `personal_access_client` tinyint(1) NOT NULL,
+  `password_client` tinyint(1) NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_clients_user_id_index` (`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `oauth_personal_access_clients` */
+
+CREATE TABLE IF NOT EXISTS `oauth_personal_access_clients` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `client_id` int(10) unsigned NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_personal_access_clients_client_id_index` (`client_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `oauth_refresh_tokens` */
+
+CREATE TABLE IF NOT EXISTS `oauth_refresh_tokens` (
+  `id` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `access_token_id` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `revoked` tinyint(1) NOT NULL,
+  `expires_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `oauth_refresh_tokens_access_token_id_index` (`access_token_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `password_resets` */
+
+CREATE TABLE IF NOT EXISTS `password_resets` (
+  `email` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  KEY `password_resets_email_index` (`email`),
+  KEY `password_resets_token_index` (`token`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `perfil` */
+
+CREATE TABLE IF NOT EXISTS `perfil` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `historico_alteracao` tinyint(1) NOT NULL DEFAULT '0',
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10521 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `perfil_funcionalidade` */
+
+CREATE TABLE IF NOT EXISTS `perfil_funcionalidade` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_perfil` bigint(20) unsigned NOT NULL,
+  `id_funcionalidade` bigint(20) unsigned NOT NULL,
+  `id_parente` bigint(20) DEFAULT NULL,
+  `ordem` int(11) unsigned NOT NULL DEFAULT '0',
+  `ativo` tinyint(1) NOT NULL DEFAULT '1',
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `perfil` (`id_perfil`),
+  KEY `funcionalidade` (`id_funcionalidade`)
+) ENGINE=InnoDB AUTO_INCREMENT=1028230 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `permissions` */
+
+CREATE TABLE IF NOT EXISTS `permissions` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `guard_name` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `display_name` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `role_has_permissions` */
+
+CREATE TABLE IF NOT EXISTS `role_has_permissions` (
+  `permission_id` int(10) unsigned NOT NULL,
+  `role_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`role_id`,`permission_id`),
+  KEY `role_has_permissions_permission_id_foreign` (`permission_id`),
+  CONSTRAINT `role_has_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `role_has_permissions_role_id_foreign` FOREIGN KEY (`role_id`) REFERENCES `roles` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `roles` */
+
+CREATE TABLE IF NOT EXISTS `roles` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `guard_name` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `display_name` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `description` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `level` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `settings` */
+
+CREATE TABLE IF NOT EXISTS `settings` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `key` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  `value` varchar(191) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `settings_key_unique` (`key`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `users` */
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `password` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `confirmed` tinyint(1) NOT NULL DEFAULT '0',
+  `gender` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `birth` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `device` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `platform` varchar(191) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `is_client` tinyint(1) NOT NULL DEFAULT '0',
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `deleted_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `users_email_unique` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Table structure for table `usuario` */
+
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `id_perfil` bigint(20) unsigned NOT NULL,
+  `usuario` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `senha` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `dt_criacao` datetime DEFAULT NULL,
+  `dt_alteracao` datetime DEFAULT NULL,
+  `dt_acesso` datetime DEFAULT NULL,
+  `dt_remocao` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `perfil` (`id_perfil`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;

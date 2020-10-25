@@ -1,0 +1,40 @@
+{
+	"files.exclude": {
+		"**/node_modules/": true,
+		"**/tests/": true,
+		"**/Tests/": true,
+		//"**/vendor/": true,
+		"**/bootstrap/": true,
+		"**/.gitkeep": true,
+		"**/package-lock.json": true,
+		"**/composer.lock": true
+	},
+	"editor.showFoldingControls": "always",
+	"editor.folding": true,
+	"fold.level": 0,
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": false,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": true,
+	"files.associations": {
+		".env": "dotenv"
+	},
+	"files.insertFinalNewline": true,
+	"files.watcherExclude": {
+		"**/.git/objects/**": true,
+		"**/.git/subtree-cache/**": true,
+		"**/node_modules/*/**": true,
+		"**/.hg/store/**": true,
+		"**/node_modules/": true,
+		"**/tests/": true,
+		"**/Tests/": true,
+		//"**/vendor/": true,
+		"**/bootstrap/": true,
+		"**/.gitkeep": true,
+		"**/package-lock.json": true,
+		"**/composer.lock": true,
+		"**/storage/*/**": true,
+		"**/storage/": true
+	}
+}

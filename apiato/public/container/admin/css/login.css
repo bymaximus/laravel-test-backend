@@ -1,0 +1,17 @@
+#content-area {
+  position: relative;
+}
+
+.vs-con-loading__container {
+  overflow: initial;
+}
+
+.vs-con-loading__container .con-vs-loading {
+  -webkit-box-pack: start;
+          justify-content: start;
+}
+
+.vs-notifications {
+  max-width: initial !important;
+}
+
