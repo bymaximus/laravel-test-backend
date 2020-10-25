@@ -1,6 +1,11 @@
 #!/usr/bin/env php
 <?php
 
+if (env('APP_ENV', 'local') == 'queue') {
+    //temporary workaroud
+    sleep(30);
+}
+
 define('LARAVEL_START', microtime(true));
 
 /*
