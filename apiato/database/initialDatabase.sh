@@ -41,7 +41,7 @@ echo -e "${GREEN}===              IMPORTANDO DADOS              ===${NC}"
 echo -e "${GREEN}==================================================${NC}"
 
 mysql -u root -p$MYSQL_ROOT_PASSWORD $MYSQL_DATABASE < /docker-entrypoint-initdb.d/seeds/initialdbtablesdata.sql.temp
-#mysql -u root -p$MYSQL_ROOT_PASSWORD $MYSQL_DATABASE < /docker-entrypoint-initdb.d/seeds/initialdbtablesdata_cidades.sql.temp
+mysql -u root -p$MYSQL_ROOT_PASSWORD $MYSQL_DATABASE < /docker-entrypoint-initdb.d/seeds/initialdbtablesdata_cidades.sql.temp
 
 echo -e "${RED}==================================================${NC}"
 echo -e "${RED}===            IMPORTAÇÃO CONCLUÍDA            ===${NC}"
