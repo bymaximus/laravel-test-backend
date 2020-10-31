@@ -4,8 +4,8 @@ A instalação é feita com o Docker (docker-compose). Os serviços incluídos s
 - Proxy nginx para acesso do frontend e backend
 - Mysql para banco de dados do backend
 - Memcache e redis para cache do frontend e backend
-- Nginx-PHP para o frontend (acessavel pelo proxy nginx)
-- Nginx-PHP para o backend (acessavel pelo proxy nginx)
+- Nginx-PHP para o frontend (acessível pelo proxy nginx)
+- Nginx-PHP para o backend (acessível pelo proxy nginx)
 - PHP para a laravel queue do backend
 - Composer para instalação dos pacotes necessários
 ##
